@@ -4,12 +4,9 @@
     "version": "1.19.3",
     "license": "Apache License 2.0",
     "bin": "kubelogin.exe",
-    "hash": "F0F4A609D202B112E6B9B14B5BCC2FB628D6134C3F4F3C14C9C89DAA02D21058",
-    "url": "https://github.com/int128/kubelogin/releases/download/v1.19.3/kubelogin_windows_amd64.zip",
+    "hash": "6FF29964A17B6C9B21F8E866C0A4276C5637C448AD8613E4E38934D99BB28698",
+    "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/kubelogin-branch-bartlettc22-custom_ok_page.zip",
     "depends": {
         "kubectl": "kubectl"
-    },
-    "autoupdate": {
-        "url": "https://github.com/int128/kubelogin/releases/download/v$version/kubelogin_windows_amd64.zip"
     }
 }
