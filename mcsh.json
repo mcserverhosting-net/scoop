@@ -3,6 +3,8 @@
     "description": "A cli for interracting with the MCSH cluster for end users",
     "version": "0.1.18",
     "license": "MIT",
+    "hash": "53ACF16CA3E9B511ABDD99582B9FB50D94DB02D1BCA60D139EBFB652ABBC6296",
+    "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/mcsh/mcsh.zip",
     "bin": [ [ "kubectl.exe", "mcsh" ] ],
     "depends": {
         "kubelogin": "kubelogin",
@@ -16,14 +18,16 @@
             "sshfs-np"
         ]
     },
-    "post_install": ["kubectl config --kubeconfig=config-demo set-cluster mcsh --server=https://158.69.113.202:6443 --certificate-authority=$persist_dir/ca.cert",
-                     "kubectl config set-credentials mcshadmin-oauth --exec-command=kubectl --exec-arg=oidc-login --exec-arg=get-token --exec-arg=--oidc-issuer-url=https://accounts.google.com --exec-arg=--oidc-client-id=8195773719-ioca60nre791utiv78sdeapde92cl2c5.apps.googleusercontent.com --exec-arg=--oidc-client-secret=vhlkwCgrW15IlufriD-XqihE --exec-api-version=client.authentication.k8s.io/v1beta1"],
+    "post_install": ["kubectl config set-cluster mcsh-na --server=https://cluster.mcserverhosting.red:6443 --certificate-authority=$dir/red.crt",
+                     "kubectl config set-cluster mcsh-eu --server=https://cluster.mcserverhosting.blue:6443 --certificate-authority=$dir/blue.crt",
+                     "kubectl config set-credentials mcsh-oauth --exec-command=kubectl --exec-arg=oidc-login --exec-arg=get-token --exec-arg=--oidc-issuer-url=https://keycloak.sfxworks.net/auth/realms/mcsh --exec-arg=--oidc-client-id=account --exec-arg=--oidc-client-secret=ee3d1b8f-b533-41d7-8efc-8c8767497f4e --exec-arg=--oidc-redirect-url-hostname=login.mcserverhosting.net --exec-api-version=client.authentication.k8s.io/v1beta1",
+                     "kubectl config set-context mcserverhosting --cluster=mcsh-na --user=mcsh-oauth"],
     "notes": [
         "You've successfully installed mcsh!",
         "We've configured it so you will login via the internet browser on your first command",
         "Check https://mcserverhosting.net/support for a list of useful commands",
         "Some quick ones to note:",
-        "mcsh attach -it your-server-id (attaches to your server's console)",
-        "mcsh apply -f your-server-config.yaml (creates or makes a new server from a file)"
+        "Your final steps are to configure your region. Run `mcsh config use-context mcsh-na` or mcsh `config use-context mcsh-eu` to set your region",
+        "After that, set your namespace using kubectl config set-context --current --namespace=your-namespace-here"
     ]
 }
