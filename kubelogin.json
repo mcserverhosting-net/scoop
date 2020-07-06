@@ -4,7 +4,7 @@
     "version": "1.19.3",
     "license": "Apache License 2.0",
     "bin": "kubelogin.exe",
-    "hash": "82F33DBC2021AD1FA4937D2C1DE005CE37B3CE0158D2A9330FFE568042412C09",
+    "hash": "6ff29964a17b6c9b21f8e866c0a4276c5637c448ad8613e4e38934d99bb28698",
     "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/kubelogin-branch-bartlettc22-custom_ok_page.zip",
     "depends": {
         "kubectl": "kubectl"
