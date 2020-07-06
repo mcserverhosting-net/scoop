@@ -1,11 +1,29 @@
 {
     "homepage": "https://mcserverhosting.net/",
-    "description": "A cli for interracting with the MCSH clustere for end users",
+    "description": "A cli for interracting with the MCSH cluster for end users",
     "version": "0.1.18",
     "license": "MIT",
     "bin": [ [ "kubectl.exe", "mcsh" ] ],
     "depends": {
         "kubelogin": "kubelogin",
-        "kubectl": "kubectl"
-    }
+        "kubectl": "kubectl",
+        "openssh": "openssh",
+        "pshazz":  "pshazz"
+    },
+    "suggest": {
+        "Windows Explorer Integration": [
+            "winfsp-np",
+            "sshfs-np"
+        ]
+    },
+    "post_install": ["kubectl config --kubeconfig=config-demo set-cluster mcsh --server=https://158.69.113.202:6443 --certificate-authority=$persist_dir/ca.cert",
+                     "kubectl config set-credentials mcshadmin-oauth --exec-command=kubectl --exec-arg=oidc-login --exec-arg=get-token --exec-arg=--oidc-issuer-url=https://accounts.google.com --exec-arg=--oidc-client-id=8195773719-ioca60nre791utiv78sdeapde92cl2c5.apps.googleusercontent.com --exec-arg=--oidc-client-secret=vhlkwCgrW15IlufriD-XqihE --exec-api-version=client.authentication.k8s.io/v1beta1"],
+    "notes": [
+        "You've successfully installed mcsh!",
+        "We've configured it so you will login via the internet browser on your first command",
+        "Check https://mcserverhosting.net/support for a list of useful commands",
+        "Some quick ones to note:",
+        "mcsh attach -it your-server-id (attaches to your server's console)",
+        "mcsh apply -f your-server-config.yaml (creates or makes a new server from a file)"
+    ]
 }
