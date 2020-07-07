@@ -1,7 +1,7 @@
 {
     "homepage": "https://mcserverhosting.net/",
     "description": "A cli for interracting with the MCSH cluster for end users",
-    "version": "0.1.18",
+    "version": "1.0",
     "license": "MIT",
     "hash": "53ACF16CA3E9B511ABDD99582B9FB50D94DB02D1BCA60D139EBFB652ABBC6296",
     "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/mcsh/mcsh.zip",
@@ -21,7 +21,8 @@
     "post_install": ["kubectl config set-cluster mcsh-na --server=https://cluster.mcserverhosting.red:6443 --certificate-authority=$dir/red.crt",
                      "kubectl config set-cluster mcsh-eu --server=https://cluster.mcserverhosting.blue:6443 --certificate-authority=$dir/blue.crt",
                      "kubectl config set-credentials mcsh-oauth --exec-command=kubectl --exec-arg=oidc-login --exec-arg=get-token --exec-arg=--oidc-issuer-url=https://keycloak.sfxworks.net/auth/realms/mcsh --exec-arg=--oidc-client-id=account --exec-arg=--oidc-client-secret=ee3d1b8f-b533-41d7-8efc-8c8767497f4e --exec-arg=--oidc-redirect-url-hostname=login.mcserverhosting.net --exec-api-version=client.authentication.k8s.io/v1beta1",
-                     "kubectl config set-context mcserverhosting --cluster=mcsh-na --user=mcsh-oauth"],
+                     "kubectl config set-context mcsh-na --cluster=mcsh-na --user=mcsh-oauth",
+                     "kubectl config set-context mcsh-eu --cluster=mcsh-eu --user=mcsh-oauth"],
     "notes": [
         "You've successfully installed mcsh!",
         "We've configured it so you will login via the internet browser on your first command",
