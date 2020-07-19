@@ -1,12 +1,14 @@
 {
     "homepage": "https://github.com/int128/kubelogin",
     "description": "kubectl plugin for Kubernetes OpenID Connect authentication (kubectl oidc-login)",
-    "version": "1.19.3",
+    "version": "1.19.4",
     "license": "Apache License 2.0",
     "bin": "kubelogin.exe",
-    "hash": "82f33dbc2021ad1fa4937d2c1de005ce37b3ce0158d2a9330ffe568042412c09",
-    "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/kubelogin-branch-bartlettc22-custom_ok_page.zip",
+    "hash": "79E36F159CBC6A58589B892233C4BAAC723A387B33D880875BC04A710C7BCD0E",
+    "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/kubelogin-krew.zip",
     "depends": {
         "kubectl": "kubectl"
-    }
+    },
+    "post_install": ["krew install  --manifest=$dir/krew.yaml",
+                     "kubectl krew install oidc-login"]
 }
