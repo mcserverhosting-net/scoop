@@ -4,8 +4,8 @@
     "version": "1.19.4",
     "license": "Apache License 2.0",
     "bin": "kubelogin.exe",
-    "hash": "79E36F159CBC6A58589B892233C4BAAC723A387B33D880875BC04A710C7BCD0E",
-    "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/krew.zip",
+    "hash": "30B295CBB39D522C56B8BA6230541EF893ECD553033EDF2D0DBC1BA76F91F0F8",
+    "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/krew-kubelogin.zip",
     "depends": {
         "kubectl": "kubectl"
     },
