@@ -4,7 +4,7 @@
     "version": "1.19.4.4",
     "license": "Apache License 2.0",
     "bin": [ "kubectl-oidc_login.exe" ],
-    "hash": "B4E6B0FDA4993A6A473F10A41043F6F6946D7D3BA1A351157A97E64E045BCF0D",
+    "hash": "E23BCEC5A43118D4A7950CC3DCF832EE18E2C1F60D055D9ECE4A07E13E531749",
     "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/kubelogin.zip",
     "depends": {
         "kubectl": "kubectl"
