@@ -5,7 +5,7 @@
     "license": "Apache License 2.0",
     "bin": [ "kubectl-oidc_login.exe" ],
     "hash": "B4E6B0FDA4993A6A473F10A41043F6F6946D7D3BA1A351157A97E64E045BCF0D",
-    "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/krew-kubelogin.zip",
+    "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/kubelogin.zip",
     "depends": {
         "kubectl": "kubectl"
     }
