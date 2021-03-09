@@ -1,9 +1,9 @@
 {
     "homepage": "https://mcserverhosting.net/",
     "description": "A cli for interracting with the MCSH cluster for end users",
-    "version": "1.0.4",
+    "version": "1.1",
     "license": "MIT",
-    "hash": "6FA865B5F9FA296D42C6D4CE8A297FCCDCDE0C154E47B36EDC23372CF5BF67C3",
+    "hash": "c22f802d160bb29cf115a5143ca102de1c177b19",
     "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/mcsh/mcsh.zip",
     "bin": [ [ "kubectl.exe", "mcsh" ] ],
     "depends": {
@@ -18,7 +18,7 @@
             "sshfs-np"
         ]
     },
-    "post_install": ["kubectl config set-cluster mcsh-na --server=https://cluster.mcserverhosting.red:6443 --certificate-authority=$dir/red.crt",
+    "post_install": ["kubectl config set-cluster mcsh-na --server=https://208.73.137.196:6443 --certificate-authority=$dir/red.crt",
                      "kubectl config set-cluster mcsh-eu --server=https://cluster.mcserverhosting.blue:6443 --certificate-authority=$dir/blue.crt",
                      "kubectl config set-credentials mcsh-oauth --exec-command=kubectl --exec-arg=oidc-login --exec-arg=get-token --exec-arg=--oidc-issuer-url=https://keycloak.sfxworks.net/auth/realms/mcsh --exec-arg=--oidc-client-id=account --exec-arg=--oidc-client-secret=ee3d1b8f-b533-41d7-8efc-8c8767497f4e --exec-arg=--oidc-redirect-url-hostname=login.mcserverhosting.net --exec-api-version=client.authentication.k8s.io/v1beta1",
                      "kubectl config set-context mcsh-na --cluster=mcsh-na --user=mcsh-oauth",
