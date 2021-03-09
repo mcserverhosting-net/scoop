@@ -1,7 +1,7 @@
 {
     "homepage": "https://mcserverhosting.net/",
     "description": "A cli for interracting with the MCSH cluster for end users",
-    "version": "1.1",
+    "version": "1.1.1",
     "license": "MIT",
     "hash": "c22f802d160bb29cf115a5143ca102de1c177b19",
     "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/mcsh/mcsh.zip",
