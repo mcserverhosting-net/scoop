@@ -3,7 +3,7 @@
     "description": "A cli for interracting with the MCSH cluster for end users",
     "version": "1.1.1",
     "license": "MIT",
-    "hash": "c22f802d160bb29cf115a5143ca102de1c177b19",
+    "hash": "ca87681d3dc37034624ee07c99eb9d789e43ef7be84619c61c381c31de3fc068",
     "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/mcsh/mcsh.zip",
     "bin": [ [ "kubectl.exe", "mcsh" ] ],
     "depends": {
