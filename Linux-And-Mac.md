@@ -5,7 +5,7 @@ Contribution by Kneelawk#0623 on Discord.
 # MCSH Tutorials
 This is a set of commands and other tutorials I have found on the discord server.
 
-## Install MCSH Client on Linux
+## Install MCSH Client on Linux and Mac
 1. Install `kubectl` [tutorial](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) (using native package management or Snap/Homebrew)
 2. Install `kubelogin` [setup](https://github.com/int128/kubelogin#setup) using Homebrew, Krew or directly to your /usr/bin/ folder from their Github Release page
 3. Download and add our blue & red cert at [https://github.com/mcserverhosting-net/scoop/tree/master/mcsh](https://github.com/mcserverhosting-net/scoop/tree/master/mcsh) and place them in `/usr/local/share/ca-certificates/`, then run `sudo update-ca-certificates`. If youre on a MAC, you can download these and double click them to add them as described [here](https://www.eduhk.hk/ocio/content/faq-how-add-root-certificate-mac-os-x).
