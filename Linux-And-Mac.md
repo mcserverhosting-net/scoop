@@ -1,4 +1,4 @@
-Applicable for Linux distribution Debian and its derivatives.
+Applicable for Linux distribution Debian and its derivatives, as well as Mac.
 
 Contribution by Kneelawk#0623 on Discord.
 
