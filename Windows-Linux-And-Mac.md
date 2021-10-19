@@ -58,6 +58,6 @@ mcsh edit minecraftserver
 ```
 
 ## Setup an ANAME Server to Point to Your Minecraft Server
-Use `51.222.70.233` as the target in your ANAME record for your DNS and reference your desired domain under `spec.network.domainName` in your `mcsh edit minecraftserver` config.
+Use `23.178.240.1` as the target in your ANAME record for your DNS and reference your desired domain under `spec.network.domainName` in your `mcsh edit minecraftserver` config.
 
 For example, if you were wanting to host your server at `mc.example.com`, you would go to your ANAME record config and set a record to have the prefix/host `mc`, and to point it to the ip `51.222.70.233`. Then, in your `mcsh edit minecraftserver` yaml config, set the property `spec.network.domainName` to `mc.example.com`. Then you're finished! It will likely take up to a day for the internet to update and know that `mc.example.com` now points to your minecraft server.
