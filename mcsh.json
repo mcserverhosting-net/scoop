@@ -1,14 +1,13 @@
 {
     "homepage": "https://mcserverhosting.net/",
     "description": "A cli for interracting with the MCSH cluster for end users",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "license": "MIT",
     "hash": "ca87681d3dc37034624ee07c99eb9d789e43ef7be84619c61c381c31de3fc068",
     "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/mcsh/mcsh.zip",
-    "bin": [ [ "kubectl.exe", "mcsh" ] ],
     "depends": {
-        "kubelogin": "kubelogin",
         "kubectl": "kubectl",
+        "kubelogin": "kubelogin",
         "openssh": "openssh",
         "pshazz":  "pshazz"
     },
@@ -30,5 +29,6 @@
         "Some quick ones to note:",
         "Your final steps are to configure your region. Run `mcsh config use-context mcsh-na` or mcsh `config use-context mcsh-eu` to set your region",
         "After that, set your namespace using kubectl config set-context --current --namespace=your-namespace-here"
-    ]
+    ],
+    "bin": [ [ "kubectl.exe", "mcsh" ] ],
 }
