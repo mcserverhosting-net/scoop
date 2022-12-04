@@ -5,8 +5,5 @@
     "license": "Apache License 2.0",
     "bin": [ "kubelogin.exe" ],
     "sha": "f048b385ad4ef4a32e1c0f56f91ab6302ffd22a3688006f462070305cecfca7f",
-    "url": "https://github.com/int128/kubelogin/releases/download/v1.25.4/kubelogin_windows_amd64.zip",
-    "depends": {
-        "kubectl": "kubectl"
-    }
+    "url": "https://github.com/int128/kubelogin/releases/download/v1.25.4/kubelogin_windows_amd64.zip"
 }
