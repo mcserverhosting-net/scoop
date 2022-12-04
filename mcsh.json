@@ -30,8 +30,5 @@
         "Your final steps are to configure your region. Run `mcsh config use-context mcsh-na` or mcsh `config use-context mcsh-eu` to set your region",
         "After that, set your namespace using kubectl config set-context --current --namespace=your-namespace-here"
     ],
-    "bin": [
-        [ "kubectl.exe", "mcsh" ],
-        [ "krew.exe", "krew"]
-    ]        
+    "bin": [[ "kubectl.exe", "mcsh" ]]        
 }
