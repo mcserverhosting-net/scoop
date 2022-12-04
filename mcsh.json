@@ -1,7 +1,7 @@
 {
     "homepage": "https://mcserverhosting.net/",
     "description": "A cli for interracting with the MCSH cluster for end users",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "license": "MIT",
     "hash": "ca87681d3dc37034624ee07c99eb9d789e43ef7be84619c61c381c31de3fc068",
     "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/mcsh/mcsh.zip",
@@ -12,7 +12,7 @@
     "post_install": [
         "kubectl config set-cluster mcsh-na --server=https://cluster.mcsh.red:6443 --certificate-authority=$dir/red.crt",
         "kubectl config set-cluster mcsh-eu --server=https://cluster.mcserverhosting.blue:6443 --certificate-authority=$dir/blue.crt",
-        "kubectl config set-credentials mcsh-oauth --exec-command=kubectl --exec-arg=kubelogin --exec-arg=get-token --exec-arg=--oidc-issuer-url=https://auth.service.mcserverhosting.net/realms/mcsh --exec-arg=--oidc-client-id=account --exec-arg=--oidc-client-secret=JCFLrBm0g4c36UozFypqjL6UDrP0KJDs --exec-api-version=client.authentication.k8s.io/v1beta1",
+        "kubectl config set-credentials mcsh-oauth --exec-command=kubelogin --exec-arg=get-token --exec-arg=--oidc-issuer-url=https://auth.service.mcserverhosting.net/realms/mcsh --exec-arg=--oidc-client-id=account --exec-arg=--oidc-client-secret=JCFLrBm0g4c36UozFypqjL6UDrP0KJDs --exec-api-version=client.authentication.k8s.io/v1beta1",
         "kubectl config set-context mcsh-na --cluster=mcsh-na --user=mcsh-oauth",
         "kubectl config set-context mcsh-eu --cluster=mcsh-eu --user=mcsh-oauth"
         ],
