@@ -6,10 +6,7 @@
     "hash": "ca87681d3dc37034624ee07c99eb9d789e43ef7be84619c61c381c31de3fc068",
     "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/mcsh/mcsh.zip",
     "depends": [
-        "kubectl",
-        "kubelogin",
-        "openssh",
-        "pshazz"
+        "kubectl"
     ],
     "suggest": {
         "Windows Explorer Integration": [
