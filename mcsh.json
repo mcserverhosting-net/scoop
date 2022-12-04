@@ -6,7 +6,8 @@
     "hash": "ca87681d3dc37034624ee07c99eb9d789e43ef7be84619c61c381c31de3fc068",
     "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/mcsh/mcsh.zip",
     "depends": [
-        "kubectl"
+        "kubectl",
+        "kubelogin"
     ],
     "suggest": {
         "Windows Explorer Integration": [
@@ -29,5 +30,8 @@
         "Your final steps are to configure your region. Run `mcsh config use-context mcsh-na` or mcsh `config use-context mcsh-eu` to set your region",
         "After that, set your namespace using kubectl config set-context --current --namespace=your-namespace-here"
     ],
-    "bin": [[ "kubectl.exe", "mcsh" ]]        
+    "bin": [
+        [ "kubectl.exe", "mcsh" ],
+        [ "krew.exe", "krew"]
+    ]        
 }
