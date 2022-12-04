@@ -1,7 +1,7 @@
 {
     "homepage": "https://mcserverhosting.net/",
     "description": "A cli for interracting with the MCSH cluster for end users",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "license": "MIT",
     "hash": "ca87681d3dc37034624ee07c99eb9d789e43ef7be84619c61c381c31de3fc068",
     "url": "https://raw.githubusercontent.com/mcserverhosting-net/scoop/master/mcsh/mcsh.zip",
@@ -17,11 +17,11 @@
             "sshfs-np"
         ]
     },
-    "post_install": ["kubectl config set-cluster mcsh-na --server=https://208.73.137.196:6443 --certificate-authority=$dir/red.crt",
-                     "kubectl config set-cluster mcsh-eu --server=https://cluster.mcserverhosting.blue:6443 --certificate-authority=$dir/blue.crt",
-                     "kubectl config set-credentials mcsh-oauth --exec-command=kubectl --exec-arg=oidc-login --exec-arg=get-token --exec-arg=--oidc-issuer-url=https://keycloak.sfxworks.net/auth/realms/mcsh --exec-arg=--oidc-client-id=account --exec-arg=--oidc-client-secret=ee3d1b8f-b533-41d7-8efc-8c8767497f4e --exec-api-version=client.authentication.k8s.io/v1beta1",
-                     "kubectl config set-context mcsh-na --cluster=mcsh-na --user=mcsh-oauth",
-                     "kubectl config set-context mcsh-eu --cluster=mcsh-eu --user=mcsh-oauth"],
+    "post_install": ["kubectl config set-cluster mcsh-na --server=https://208.73.137.196:6443 --certificate-authority=$pwd/red.crt",
+                 "kubectl config set-cluster mcsh-eu --server=https://cluster.mcserverhosting.blue:6443 --certificate-authority=$pwd/blue.crt",
+                 "kubectl config set-credentials mcsh-oauth --exec-command=kubectl --exec-arg=oidc-login --exec-arg=get-token --exec-arg=--oidc-issuer-url=https://keycloak.sfxworks.net/auth/realms/mcsh --exec-arg=--oidc-client-id=account --exec-arg=--oidc-client-secret=ee3d1b8f-b533-41d7-8efc-8c8767497f4e --exec-api-version=client.authentication.k8s.io/v1beta1",
+                 "kubectl config set-context mcsh-na --cluster=mcsh-na --user=mcsh-oauth",
+                 "kubectl config set-context mcsh-eu --cluster=mcsh-eu --user=mcsh-oauth"],
     "notes": [
         "You've successfully installed mcsh!",
         "We've configured it so you will login via the internet browser on your first command",
