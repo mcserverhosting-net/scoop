@@ -9,16 +9,10 @@
         "kubectl",
         "kubelogin"
     ],
-    "suggest": {
-        "Windows Explorer Integration": [
-            "winfsp-np",
-            "sshfs-np"
-        ]
-    },
     "post_install": [
         "kubectl config set-cluster mcsh-na --server=https://208.73.137.196:6443 --certificate-authority=$dir/red.crt",
         "kubectl config set-cluster mcsh-eu --server=https://cluster.mcserverhosting.blue:6443 --certificate-authority=$dir/blue.crt",
-        "kubectl config set-credentials mcsh-oauth --exec-command=kubectl --exec-arg=oidc-login --exec-arg=get-token --exec-arg=--oidc-issuer-url=https://keycloak.sfxworks.net/auth/realms/mcsh --exec-arg=--oidc-client-id=account --exec-arg=--oidc-client-secret=ee3d1b8f-b533-41d7-8efc-8c8767497f4e --exec-api-version=client.authentication.k8s.io/v1beta1",
+        "kubectl config set-credentials mcsh-oauth --exec-command=kubectl --exec-arg=oidc-login --exec-arg=get-token --exec-arg=--oidc-issuer-url=https://auth.service.mcserverhosting.net/realms/mcsh --exec-arg=--oidc-client-id=account --exec-arg=--oidc-client-secret=JCFLrBm0g4c36UozFypqjL6UDrP0KJDs --exec-api-version=client.authentication.k8s.io/v1beta1",
         "kubectl config set-context mcsh-na --cluster=mcsh-na --user=mcsh-oauth",
         "kubectl config set-context mcsh-eu --cluster=mcsh-eu --user=mcsh-oauth"
         ],
@@ -30,5 +24,5 @@
         "Your final steps are to configure your region. Run `mcsh config use-context mcsh-na` or mcsh `config use-context mcsh-eu` to set your region",
         "After that, set your namespace using kubectl config set-context --current --namespace=your-namespace-here"
     ],
-    "bin": [[ "kubectl.exe", "mcsh" ]]        
+    "bin": [[ "kubectl.exe", "mcsh" ]]
 }
