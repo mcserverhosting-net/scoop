@@ -8,6 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Test Scoop Bucket
+        user: non-root
         run: |
           # Install Scoop
           Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
