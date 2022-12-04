@@ -16,4 +16,4 @@ jobs:
           scoop bucket add my-scoop-bucket https://github.com/mcserverhosting-net/scoop.git
           scoop install mcsh
           # Run any tests for the app
-          mcsh version --client=true
+          mcsh
