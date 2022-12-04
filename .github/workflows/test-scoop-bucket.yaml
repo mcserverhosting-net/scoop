@@ -13,7 +13,7 @@ jobs:
           Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
           iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
           # Install the app from your bucket
-          scoop bucket add my-scoop-bucket https://github.com/mcserverhosting-net/scoop.git
+          scoop bucket add mcsh https://github.com/mcserverhosting-net/scoop.git
           scoop install mcsh
           # Run any tests for the app
           mcsh
