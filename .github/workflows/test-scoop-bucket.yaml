@@ -10,7 +10,8 @@ jobs:
       - name: Test Scoop Bucket
         run: |
           # Install Scoop
-          curl -fsSL https://raw.githubusercontent.com/lukesampson/scoop/main/install.ps1 | powershell -s
+          Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+          irm get.scoop.sh | iex
           # Install the app from your bucket
           scoop bucket add my-scoop-bucket https://github.com/mcserverhosting-net/scoop.git
           scoop install mcsh
